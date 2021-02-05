@@ -47,6 +47,6 @@ public class Second {
         String newname1 = new String("Sofia"); //uus objekt
         String newname2 = new String("Sofia");
 
-        System.out.println(name1 == name2);
+        System.out.println(newname1 == newname2);
     }
 }

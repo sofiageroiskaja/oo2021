@@ -18,7 +18,7 @@ public class First {
         char character = 'F';
 //for tsukkel
         for (int i = 0; i < greetingsArray.length; i++){
-            System.out.println(args[i]);
+            System.out.println(greetingsArray[1]);
         }
 
 //foreach tsukkel
