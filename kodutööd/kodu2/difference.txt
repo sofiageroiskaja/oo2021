@@ -1,0 +1,40 @@
+List interface in Java is a sub-interface of the Java 
+collections interface. It contains the index-based 
+methods to insert, update, delete, and search the 
+elements. It can have duplicate elements also. We can 
+also store the null elements in the list. List preserves the 
+insertion order, it allows positional access and 
+insertion of elements. 
+
+The Set follows the unordered way and it found in 
+java.util package and extends the collection interface 
+in java. Duplicate item will be ignored in Set and it 
+will not print in the final output.
+
+The Java Map interface, java.util.Map represents a 
+mapping between a key and a value. More specifically, 
+a Java Map can store pairs of keys and values. Each key 
+is linked to a specific value. Once stored in a Map, you 
+can later look up the value using just the key. 
+
+DIFFERENCE
+The list interface allows duplicate elements
+Set does not allow duplicate elements.
+The map does not allow duplicate elements
+
+The list maintains insertion order.
+Set do not maintain any insertion order. 
+The map also does not maintain any insertion order. 
+
+We can add any number of null values.
+But in set almost only one null value.
+The map allows a single null key at most and any number 
+of null values.
+
+The list provides get() method to get the element at a specified index.
+Set does not provide get method to get the elements at a specified index
+The map does not  provide get method to get the elements at a specified index
+
+If you need to access the elements frequently by using the index then we can use the list
+If you want to create a collection of unique elements then we can use set
+If you want to store the data in the form of key/value pair then we can use the map.
