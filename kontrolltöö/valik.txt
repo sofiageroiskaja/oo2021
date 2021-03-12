@@ -2,4 +2,4 @@ Algarvud
 
 * Teata, kas kasutaja sisestatud arv jagub kahe, kolme viie või seitsmega.
 * Teata, kas kasutaja sisestatud arv on algarv. 
-* Koosta massiiv esimese tuhande algarvuga. Leia selle sõela abil, millised on kümme suurimat algarvu, mis on väiksemad, kui tuhandenda algarvu ruut. 
+* Koosta massiiv esimese tuhande algarvuga. Leia selle sõela abil, millised on kümme suurimat algarvu, mis on väiksemad, kui tuhandenda algarvu ruut.
