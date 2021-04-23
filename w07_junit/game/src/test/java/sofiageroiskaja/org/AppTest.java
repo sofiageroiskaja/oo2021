@@ -1,18 +1,12 @@
 package sofiageroiskaja.org;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-/**
- * Unit test for simple App.
- */
-class AppTest {
-    /**
-     * Rigorous Test.
-     */
+public class AppTest {
     @Test
-    void testApp() {
-        assertEquals(1, 1);
+    public void test_JUnit() {
+        System.out.println("This is a test");
+        String str = "This is a test";
+        assertEquals("This is a test", str);
     }
 }

@@ -1,6 +1,6 @@
 package sofiageroiskaja.org;
 
-public class Tictactoe{
+public class Tictactoe implements Game{
 	private String[][] game_board;
 	private static final int rows = 3;
 	private static final int cln = 3;
@@ -10,7 +10,8 @@ public class Tictactoe{
 		game_board = new String[rows][cln];
 		this.init_gameboard();
 	}
-	
+
+	@Override
 	public void init_gameboard(){
 		for(int i = 0; i < rows; i++){
 			for(int j = 0; j < cln; j++){
@@ -24,6 +25,7 @@ public class Tictactoe{
 			game_board[i][j] = " " + player + " ";
 	}
 
+	@Override
 	public boolean game_over() {
     	for(int i = 0; i < rows; i++) {
     		if(!game_board[i][0].matches(regex) && game_board[i][0].equals(game_board[i][1]) && game_board[i][1].equals(game_board[i][2])) {    			
@@ -44,6 +46,7 @@ public class Tictactoe{
         return false;
 	}
 	
+	@Override
 	public String show_gameboard() {
 		String board = "";
 		for(int i = 0; i < rows; i++){
