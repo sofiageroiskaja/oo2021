@@ -8,11 +8,10 @@
 </head>
 <body>
   <h1>ToDo List</h1>
-  <div th:switch="${todos}">
-    <h2 th:case="null">No ToDos exist</h2>
+  <p>Tasks that i need to finish</p>
+  <div th:switch="${users}">
+    <h2 th:case="null">ToDo's do not exist</h2>
     <div th:case="*">
-      <p>List of todo's. Add, edit and delete them.</p>
-      <p>And dont forget to do them</p>
       <table>
         <thead>
           <tr>
@@ -23,16 +22,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr th:each="todo : ${todos}">
-            <td th:text="${todo.name}"></td>
-            <td th:text="${todo.description}"></td>
-            <td><a th:href="@{/edit/{id}(id=${todo.id})}">Edit</a></td>
-            <td><a th:href="@{/delete/{id}(id=${todo.id})}">Delete</a></td>
+          <tr th:each="user : ${users}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.email}"></td>
+            <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
+            <td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-  <button><a href="/add">Add a new ToDo</a></button>
+  <p><a href="/signup">Add a new ToDo</a></p>
 </body>
 </html>
