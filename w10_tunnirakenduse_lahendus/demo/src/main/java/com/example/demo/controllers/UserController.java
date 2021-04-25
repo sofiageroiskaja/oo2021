@@ -47,7 +47,7 @@ public class UserController {
   @GetMapping("/edit/{id}")
   public String showUpdate(@PathVariable("id") long id, Model model){
     User user = userRepository.findById(id)
-      .orElseThrow(() -> new IllegalArgumentException("No such user with id " + id));
+      .orElseThrow(() -> new IllegalArgumentException("No such todo with id " + id));
     model.addAttribute("user", user);
 
     return "update";

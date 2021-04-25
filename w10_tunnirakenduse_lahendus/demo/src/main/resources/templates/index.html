@@ -15,7 +15,7 @@
       <table>
         <thead>
           <tr>
-            <th>Name</th>
+            <th>Title</th>
             <th>Description</th>
             <th>Edit</th>
             <th>Delete</th>
@@ -23,7 +23,7 @@
         </thead>
         <tbody>
           <tr th:each="user : ${users}">
-            <td th:text="${user.name}"></td>
+            <td th:text="${user.title}"></td>
             <td th:text="${user.description}"></td>
             <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
             <td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>
@@ -32,6 +32,6 @@
       </table>
     </div>
   </div>
-  <p><a href="/signup">Add a new ToDo</a></p>
+  <p><a href="/signup">Add new</a></p>
 </body>
 </html>
