@@ -16,15 +16,15 @@ public class User {
   @NotBlank(message = "Must enter a name")
   private String name;
 
-  @NotBlank(message = "Must enter an e-mail")
-  private String email;
+  @NotBlank(message = "Must enter a description")
+  private String description;
 
   public User() {
   }
 
-  public User(String name, String email) {
+  public User(String name, String description) {
     this.name = name;
-    this.email = email;
+    this.description = description;
   }
 
   public void setId(long id) {
@@ -39,20 +39,20 @@ public class User {
     this.name = name;
   }
 
-  public void setEmail(String email) {
-    this.email = email;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   public String getName() {
     return name;
   }
 
-  public String getEmail() {
-    return email;
+  public String getDescription() {
+    return description;
   }
 
   @Override
   public String toString() {
-    return "User{" + "id=" + id + ", name=" + name + ", email=" + email + '}';
+    return "User{" + "id=" + id + ", name=" + name + ", description=" + description + '}';
   }
 }

@@ -12,9 +12,9 @@
     <label for="name">Name</label>
     <input th:field="*{name}" type="text" name="name" id="name">
     <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br/>
-    <label for="email">Description</label>
-    <input th:field="*{email}" type="text" name="email" id="email">
-    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span><br/>
+    <label for="description">Description</label>
+    <input th:field="*{description}" type="text" name="description" id="description">
+    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span><br/>
     <button type="submit">Add New</button>
   </form>
 </body>
