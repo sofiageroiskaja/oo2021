@@ -4,32 +4,35 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
+  <title>ToDo List</title>
 </head>
 <body>
-  <div th:switch="${users}">
-    <h2 th:case="null">Users do not exist</h2>
+  <h1>ToDo List</h1>
+  <div th:switch="${todos}">
+    <h2 th:case="null">No ToDos exist</h2>
     <div th:case="*">
+      <p>List of todo's. Add, edit and delete them.</p>
+      <p>And dont forget to do them</p>
       <table>
         <thead>
           <tr>
             <th>Name</th>
-            <th>Email</th>
+            <th>Description</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
         </thead>
         <tbody>
-          <tr th:each="user : ${users}">
-            <td th:text="${user.name}"></td>
-            <td th:text="${user.email}"></td>
-            <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
-            <td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>
+          <tr th:each="todo : ${todos}">
+            <td th:text="${todo.name}"></td>
+            <td th:text="${todo.description}"></td>
+            <td><a th:href="@{/edit/{id}(id=${todo.id})}">Edit</a></td>
+            <td><a th:href="@{/delete/{id}(id=${todo.id})}">Delete</a></td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
-  <p><a href="/signup">Add a new user</a></p>
+  <button><a href="/add">Add a new ToDo</a></button>
 </body>
 </html>

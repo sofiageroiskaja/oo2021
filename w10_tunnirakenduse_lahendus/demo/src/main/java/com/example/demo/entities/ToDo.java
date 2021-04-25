@@ -7,8 +7,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-public class User {
-    
+public class ToDo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -16,16 +15,18 @@ public class User {
     @NotBlank(message = "Must enter a name")
     private String name;
 
-    @NotBlank(message = "Must enter an e-mail")
-    private String email;
+    @NotBlank(message = "Must enter a description")
+    private String description;
 
-    public User() {}
- 
-    public User(String name, String email) {
-        this.name = name;
-        this.email = email;
+    public ToDo() {
+
     }
- 
+
+    public ToDo(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     public void setId(long id) {
         this.id = id;
     }
@@ -33,25 +34,25 @@ public class User {
     public long getId() {
         return id;
     }
-    
+
     public void setName(String name) {
         this.name = name;
     }
-    
-    public void setEmail(String email) {
-        this.email = email;
+
+    public void setDescription(String description) {
+        this.description = description;
     }
- 
+
     public String getName() {
         return name;
     }
- 
-    public String getEmail() {
-        return email;
+
+    public String getDescription() {
+        return description;
     }
- 
+
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name=" + name + ", email=" + email + '}';
+        return "ToDo{" + "id=" + id + ", name=" + name + ", description=" + description  + '}';
     }
 }
