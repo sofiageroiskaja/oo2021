@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/todo.css">
     <title>Todo List</title>
 </head>
 <body>
+    <div class="todolist">
     <h1>My Todos</h1>
+    <p>Tasks i need to finish</p>
     <table>
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Task</th>
-                <th>Description</th>
-            </tr>
         </thead>
         <tbody>
-            <tr th:each="todo : ${todos}">
-                <td th:text="${todo.id}">ID</td>
-                <td th:text="${todo.title}">Title</td>
-                <td th:text="${todo.description}">Description</td>
-                <td><a th:href="@{/edit/{id}(id=${todo.id})}">Edit</a></td>
-                <td><a th:href="@{/delete/{id}(id=${todo.id})}">Delete</a></td>
-            </tr>
-        </tbody>
-    </table>
-<p><a href="/addtodo">Add new</a></p>
+        <tr th:each="todo : ${todos}">
+            <td th:text="${todo.id}" id="id">ID</td>
+            <td th:text="${todo.description}" id="description">Description</td>
+            <td th:text="${todo.deadline}" id="deadline">Deadline</td>
+            <td><input type="checkbox" id="completed"></td>
+            <td><button id="btn"><i class="fa fa-edit"><a th:href="@{/edit/{id}(id=${todo.id})}">Edit</i></a></button></td>
+            <td><button id="delete"><i class="fa fa-trash"></i><a th:href="@{/delete/{id}(id=${todo.id})}">Delete</i></a></button></td>
+    </tr>
+</tbody>
+</table>
+    <p><button class="add"><a href="/addtodo">Add new</a></button></p>
+</div>
 </body>
 </html>

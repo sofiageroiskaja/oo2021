@@ -1,0 +1,66 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+	background: #fdfbfb;
+	font-family: Verdana, Tahoma, sans-serif;
+}
+
+.todolist{
+	margin: 100px auto;
+	width: 550px;
+	background: #69faff;
+	color: #1d1c1c;
+	box-shadow:-10px -10px 0px 0px rgba(112, 112, 112, 0.1);
+	border-radius: 20px;
+}
+
+h1{
+    font-size: 24px;
+	text-align: center;
+	padding: 15px;
+}
+
+p{
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 15px;
+	border-bottom: 1px solid rgba(112, 112, 112, 0.1);
+}
+
+button, i{
+	border: 1px solid rgba(112, 112, 112, 0.1);
+	border-radius: 20px;
+	color: #e9eff0;
+	background-color: #65d2d6;
+	text-transform:uppercase;
+	cursor:pointer;
+	padding: 3px;
+}
+
+#delete{
+	background-color: #e75f4d;
+}
+
+.add{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+  
+th, td {
+	text-align: center;
+	padding: 10px
+}
