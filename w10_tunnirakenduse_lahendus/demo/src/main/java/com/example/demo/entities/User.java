@@ -13,18 +13,18 @@ public class User {
   @GeneratedValue(strategy = GenerationType.AUTO)
   private long id;
 
-  @NotBlank(message = "Must enter a title")
-  private String title;
+  @NotBlank(message = "Must enter a name")
+  private String name;
 
-  @NotBlank(message = "Must enter a description")
-  private String description;
+  @NotBlank(message = "Must enter an e-mail")
+  private String email;
 
   public User() {
   }
 
-  public User(String title, String description) {
-    this.title = title;
-    this.description = description;
+  public User(String name, String email) {
+    this.name = name;
+    this.email = email;
   }
 
   public void setId(long id) {
@@ -35,24 +35,24 @@ public class User {
     return id;
   }
 
-  public void setTitle(String title) {
-    this.title = title;
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public void setDescription(String description) {
-    this.description = description;
+  public void setEmail(String email) {
+    this.email = email;
   }
 
-  public String getTitle() {
-    return title;
+  public String getName() {
+    return name;
   }
 
-  public String getDescription() {
-    return description;
+  public String getEmail() {
+    return email;
   }
 
   @Override
   public String toString() {
-    return "User{" + "id=" + id + ", title=" + title + ", description=" + description + '}';
+    return "User{" + "id=" + id + ", name=" + name + ", email=" + email + '}';
   }
 }

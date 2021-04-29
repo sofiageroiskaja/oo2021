@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add a ToDo</title>
+  <title>SignUp</title>
 </head>
 <body>
-  <h1>Add a ToDo</h1>
+  <h1>SignUp</h1>
   <form action="#" th:action="@{/addUser}" th:object="${user}" method="post">
-    <label for="title">Title</label>
-    <input th:field="*{title}" type="text" name="title" id="title">
-    <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span><br/>
-    <label for="description">Description</label>
-    <input th:field="*{description}" type="text" name="description" id="description">
-    <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span><br/>
-    <button type="submit">Add New</button>
+    <label for="name">Name</label>
+    <input th:field="*{name}" type="text" name="name" id="name">
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span><br/>
+    <label for="email">E-mail</label>
+    <input th:field="*{email}" type="text" name="email" id="email">
+    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span><br/>
+    <button type="submit">Add New User</button>
   </form>
 </body>
 </html>

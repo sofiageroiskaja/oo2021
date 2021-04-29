@@ -4,27 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDo List</title>
+  <title>Index</title>
 </head>
 <body>
-  <h1>ToDo List</h1>
-  <p>Tasks that i need to finish</p>
   <div th:switch="${users}">
-    <h2 th:case="null">ToDo's do not exist</h2>
+    <h2 th:case="null">Users do not exist</h2>
     <div th:case="*">
       <table>
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Description</th>
+            <th>Name</th>
+            <th>Email</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
         </thead>
         <tbody>
           <tr th:each="user : ${users}">
-            <td th:text="${user.title}"></td>
-            <td th:text="${user.description}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.email}"></td>
             <td><a th:href="@{/edit/{id}(id=${user.id})}">Edit</a></td>
             <td><a th:href="@{/delete/{id}(id=${user.id})}">Delete</a></td>
           </tr>
