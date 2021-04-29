@@ -4,22 +4,35 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Todo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private long id;
+
+    @NotBlank(message = "Must enter a title")
     private String title;
+    
+    @NotBlank(message = "Must enter a description")
     private String description;
     
-    public Long getId() {
+    public Todo(){
+
+    }
+
+    public Todo(String title, String description){
+        this.title = title;
+        this.description = description;
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 

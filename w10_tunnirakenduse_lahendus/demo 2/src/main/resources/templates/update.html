@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add new</title>
+    <title>Update</title>
 </head>
 <body>
-    <h1>Add a new Todo</h1>
-    <form action="#" th:action="@{/addTodo}" th:object="${todo}" method="post">
+    <h1>Uptade a Todo</h1>
+    <form action="#" th:action="@{/update/{id}(id=${todo.id})}" th:object="${todo}" method="post">
     <label for="title">Title</label>
     <input th:field="*{title}" type="text" name="title" id="title">
     <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
     <label for="description">Description</label>
     <input th:field="*{description}" type="text" name="description" id="description">
     <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
-    <button type="submit">Add new</button>
+    <button type="submit">Update</button>
     </form>
 </body>
 </html>

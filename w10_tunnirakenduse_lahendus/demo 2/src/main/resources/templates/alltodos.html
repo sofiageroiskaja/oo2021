@@ -18,11 +18,14 @@
         </thead>
         <tbody>
             <tr th:each="todo : ${todos}">
-                <td th:text="${todo.id}">id</td>
-                <td th:text="${todo.task}">task</td>
-                <td th:text="${todo.description}">description</td>
+                <td th:text="${todo.id}">ID</td>
+                <td th:text="${todo.title}">Title</td>
+                <td th:text="${todo.description}">Description</td>
+                <td><a th:href="@{/edit/{id}(id=${todo.id})}">Edit</a></td>
+                <td><a th:href="@{/delete/{id}(id=${todo.id})}">Delete</a></td>
             </tr>
         </tbody>
     </table>
+<p><a href="/addtodo">Add new</a></p>
 </body>
 </html>
