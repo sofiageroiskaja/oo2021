@@ -21,8 +21,8 @@
             <td th:text="${todo.description}" id="description">Description</td>
             <td th:text="${todo.deadline}" id="deadline">Deadline</td>
             <td><input type="checkbox" id="completed"></td>
-            <td><button id="btn"><i class="fa fa-edit"><a th:href="@{/edit/{id}(id=${todo.id})}">Edit</i></a></button></td>
-            <td><button id="delete"><i class="fa fa-trash"></i><a th:href="@{/delete/{id}(id=${todo.id})}">Delete</i></a></button></td>
+            <td><button id="btn"><i class="fa fa-edit"><a th:href="@{/edit/{id}(id=${todo.id})}"> Edit</i></a></button></td>
+            <td><button id="delete"><i class="fa fa-trash"></i><a th:href="@{/delete/{id}(id=${todo.id})}"> Delete</i></a></button></td>
     </tr>
 </tbody>
 </table>
