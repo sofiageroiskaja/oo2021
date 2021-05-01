@@ -1,0 +1,9 @@
+Autowiring feature of spring framework enables you to inject the object dependency implicitly. It internally uses setter or constructor injection. Autowiring can't be used to inject primitive and string values. It works with reference only.
+
+@NotNull constraint won't allow null values for the constrained field(s). Even so, the field(s) can be empty.
+
+@NotEmpty annotation makes use of the @NotNull class' isValid() implementation and additionally checks that the size/length of the supplied object (of course, this varies according to the type of object being validated) is greater than zero.
+
+The @NotBlank annotation uses the NotBlankValidator class, which checks that a character sequence's trimmed length is not empty:
+
+@GetMapping is used to handle GET type of request method, @PostMapping is used to handle POST type of request method
